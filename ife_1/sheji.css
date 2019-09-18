@@ -1,0 +1,250 @@
+*{margin: 0;padding: 0;}
+
+body{
+	font-family: "Microsoft Yahei",sans-serif;
+}
+
+header{
+	font-weight: lighter;
+	background-image: url(img/Background.png);
+	color: white;
+	width: 100%;
+	height: 990px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#title{
+	display: inline-block;
+	margin-top: 200px;
+	font-size: 64px;
+}
+
+#passages{
+	padding: 100px 25% 70px 25%;
+	font-size: 20px;
+	color: #BFBFBF;
+}
+
+#login{
+	display: inline-block;
+	width: 65%;
+	height: 240px;
+	border: 1px solid #808080;
+}
+
+#login div:first-child{
+	padding: 60px 0 15px 0;
+	font-size: 22px;
+}
+
+#login div:nth-child(2){
+	padding-bottom: 30px;
+    color: rgb(90, 90, 90);
+
+}
+
+#login div input:first-child{
+    width: 25%;
+    height: 40px;
+    border: 1px solid #808080;
+    background:rgba(0,0,0,0);
+}
+
+#login div input:first-child::placeholder{
+	color: white;
+}
+ 
+#login div input:nth-child(2) {
+    width: 25%;
+    height: 40px;
+    border: 1px solid #808080;
+    background:rgba(0,0,0,0);
+    margin-left: 5px;
+}
+ 
+#login div input:nth-child(3) {
+    width: 10%;
+    height: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    margin-left: 5px;
+}
+
+section{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	/*border-bottom: 2px solid rgb(200, 200, 200);*/
+}
+
+#second{
+	height: 700px;
+}
+
+#second>div:nth-child(1){
+	display: inline-block;
+	margin-top: 120px;
+}
+
+#second>div:nth-child(2){
+	margin-top: 60px;
+	font-size: 48px;
+	height: 170px;
+	font-weight: lighter;
+}
+
+#info{
+	width: 80%;
+	height: 450px;
+	margin: 0px auto;
+	margin-top: 50px;
+}
+
+#info div{
+	width: 50%;
+	height: 120px;
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+#phone,#pencil{
+	float: left;
+}
+
+#check,#setting{
+	float: right;
+}
+
+#info div img{
+	display: block;
+	float: left;
+	padding: 0 15px 80px 20px;
+}
+
+#info div h1{
+	padding-bottom: 10px;
+}
+
+#third{
+	height: 750px;
+	/*图片路径不能有空格*/
+	background-image: url(img/Background2.png);
+	text-align: left;
+	color: white;
+	font-weight: lighter;
+}
+
+#supportive{
+	width: 32%;
+	height: 430px;
+	float: left;
+	padding: 150px 0 0 10%;
+}
+
+#supportive h1{
+	font-size: 40px;
+	font-weight: lighter;
+
+}
+
+#supportive p{
+	font-size: 18px;
+	color: black;
+}
+
+#supportive button{
+	width: 50%;
+	height: 50px;
+	text-align: center;
+	margin-bottom: 10px;
+    /*border: none;*/
+    border-radius: 5px;
+	border: 1px solid black;
+}
+
+#button1{
+	background: white;
+}
+
+#button2{
+	background: rgb(0,0,0,0);
+	color: white;
+}
+
+#ipad{
+	width: 40%;
+	height: 100%;
+	float: right;
+	margin-top: 75px;
+}
+
+#ipad img{
+	width: 100%;
+}
+
+#fourht{
+	width: 100%;
+	height: 1000px;
+}
+
+#crew>div:nth-child(1){
+	padding-top: 50px;
+	font-size: 40px;
+	font-weight: lighter;
+}
+
+#crew>div:nth-child(3){
+	width: 30%;
+	padding-bottom: 30PX;
+	margin: 0 auto;
+	font-weight: lighter;
+}
+
+#crewphoto{
+	width: 50%;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.img_div {
+	width: 40%;
+	position: relative;
+	float: left;
+	margin: 5%;
+}
+
+.who{
+	width: 100%;
+}
+
+.mask {
+	background-image: url(img/Background拷贝.png);
+	width: 100%;
+	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    opacity: 0;
+}
+
+.mask h1{
+    font-weight: lighter;
+	padding-top: 10%;
+}
+
+.mask p{
+	/*font-weight: lighter;*/
+	padding-top: 5%;
+	color: black;
+}
+
+.mask img{
+	padding-top: 20%;
+}
+
+.mask:hover{
+	opacity: 1;
+}
