@@ -1,4 +1,3 @@
 # Dmeo
-my demo
-some simple demo :)
-hope you like it.
+Some simple demo :)
+Hope you like it.
