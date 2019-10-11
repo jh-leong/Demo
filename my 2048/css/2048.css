@@ -1,0 +1,262 @@
+*{margin: 0;padding: 0px;}
+
+body{
+  width: 100%;
+  height: 100%;
+  background-color: #FAEBD7;
+  /*overflow: hidden;*/
+}
+
+header{
+	color: #F8FFE5;
+	text-align: center;
+	padding-top: 30px;
+  width: 100%;
+}
+header span {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 0 0.2rem;
+  background: #FFC43D;
+  border-radius: 5px;
+}
+header span:nth-of-type(2) {
+  background: #EF476F;
+}
+header span:nth-of-type(3) {
+  background: #1B9AAA;
+}
+header span:nth-of-type(4) {
+  background: #06D6A0;
+}
+header span:nth-of-type(5) {
+  background: #05A178;
+}
+
+@keyframes jump{
+	from{transform: translateY(0);}
+	50%{transform: translateY(-30px);}
+	to{transform: translateY(0);}
+}
+header span:hover{
+	animation: jump 0.6s linear infinite;
+}
+
+#main{
+  position: relative;
+  height: 500px;
+  width: 900px;
+  margin: 30px auto;
+}
+
+#record{
+  font-size: 22px;
+  float: right;
+}
+
+#record1{
+  display: flex;
+  justify-content: space-between;
+}
+
+#addScore{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  color: #1B9AAA;
+  opacity: 0;
+}
+
+.active{
+  animation: add 0.6s ease-in-out;
+}
+
+@keyframes add {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+#newGame button{
+  width: 80px;
+  height: 30px;
+  border: 1px solid #FF9933;
+  border-radius: 8px;
+  background-color: #FF9933;
+  color: white;
+  outline: none;
+  float: left;
+  margin: 20px 5px 0 0;
+}
+
+#face:after{
+  font-size: 30px;
+  content: "😐";
+}
+
+#newGame button:hover{
+  background-color: #BF7326;  
+}
+
+#newGame button:hover + #face:after{
+  content: "😟";
+}
+
+#gridContainer{
+  clear: right;
+}
+
+table{
+  width: 400px;
+  height: 400px;
+  background-color: #FF9696;
+  border:5px solid #FF9696;
+  text-align:center;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-size: 28px;
+  padding: 0;
+}
+
+tr,td{
+  width: 15%;
+  height: 15%;
+  border: 1px solid #FF7373;
+  border-radius: 10px;
+}
+
+.boardCell{
+  animation: pop 0.3s ease-in-out;
+  transition: all 0.1s;
+}
+
+.showNum{
+  animation: pp 0.3s ease-in-out;
+  transition: all 0.1s;
+}
+
+@keyframes pp{
+  from{
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  90%{
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pop{
+  from{
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  90%{
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#badge{
+  position: absolute;
+  font-size: 22px;
+  width: 200px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#badge10{
+  padding-top: 35px;
+}
+
+.badgeCell{
+  display: inline-block;
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+#bottom{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn{
+  width: 80px;
+  height: 30px;
+  border: 1px solid #FF9933;
+  border-radius: 8px;
+  background-color: #FF9933;
+  color: white;
+  outline: none;
+}
+
+body div: nth-of-type(1){
+  position: relative;
+}
+
+#winMask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color:rgba(0,0,0,0.2);
+  opacity: 0;
+  z-index: -10;
+}
+
+#winGame{
+  position: absolute;
+  top: 45%;
+  left: 36.8%;
+}
+
+#winMask p{
+  font-size: 1.5rem;
+  margin: 20px;
+}
+
+#overMask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color:rgba(0,0,0,0.2);
+  opacity: 0;
+  z-index: -10;
+}
+
+#gameOver{
+  position: absolute;
+  top: 40%;
+  left: 44%;
+}
+
+#overMask p{
+  font-size: 1.5rem;
+  margin: 20px;
+}
