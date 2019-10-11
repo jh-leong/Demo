@@ -4,13 +4,12 @@ body{
   width: 100%;
   height: 100%;
   background-color: #FAEBD7;
-  /*overflow: hidden;*/
 }
 
 header{
 	color: #F8FFE5;
 	text-align: center;
-	padding-top: 30px;
+	padding-top: 50px;
   width: 100%;
 }
 header span {
@@ -46,19 +45,21 @@ header span:hover{
 
 #main{
   position: relative;
-  height: 500px;
-  width: 900px;
-  margin: 30px auto;
+  width: 100%;
+  margin: 50px auto;
 }
 
 #record{
+  width: 300px;
   font-size: 22px;
-  float: right;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
 #record1{
-  display: flex;
-  justify-content: space-between;
+  line-height: 50px;
 }
 
 #addScore{
@@ -92,7 +93,7 @@ header span:hover{
   color: white;
   outline: none;
   float: left;
-  margin: 20px 5px 0 0;
+  margin: 10px 0 0 0;
 }
 
 #face:after{
@@ -109,12 +110,13 @@ header span:hover{
 }
 
 #gridContainer{
-  clear: right;
+  width: 100%;
+  margin: 0 auto;
 }
 
 table{
-  width: 400px;
-  height: 400px;
+  width: 375px;
+  height: 375px;
   background-color: #FF9696;
   border:5px solid #FF9696;
   text-align:center;
@@ -170,36 +172,14 @@ tr,td{
     opacity: 1;
   }
 }
-
-#badge{
-  position: absolute;
-  font-size: 22px;
-  width: 200px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-#badge10{
-  padding-top: 35px;
-}
-
-.badgeCell{
-  display: inline-block;
-  height: 30px;
-  width: 80px;
-  text-align: center;
-  border-radius: 20px;
-  padding: 5px;
-  margin-top: 10px;
-}
-
+/*
 #bottom{
-  width: 50%;
+  width: 360px;
   margin: 0 auto;
+  margin-top: 40px;
   text-align: center;
-}
+  font-size: 1rem;
+}*/
 
 .btn{
   width: 80px;
@@ -225,12 +205,13 @@ body div: nth-of-type(1){
   background-color:rgba(0,0,0,0.2);
   opacity: 0;
   z-index: -10;
+  display: flex;
+  justify-content: center;
 }
 
 #winGame{
   position: absolute;
   top: 45%;
-  left: 36.8%;
 }
 
 #winMask p{
@@ -248,12 +229,13 @@ body div: nth-of-type(1){
   background-color:rgba(0,0,0,0.2);
   opacity: 0;
   z-index: -10;
+  display: flex;
+  justify-content: center;
 }
 
 #gameOver{
   position: absolute;
   top: 40%;
-  left: 44%;
 }
 
 #overMask p{

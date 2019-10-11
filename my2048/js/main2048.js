@@ -3,6 +3,7 @@ let score = 0;
 const len = board.length;
 let firstWin = true;
 let combineMusic;
+let startX, startY, endX, endY;
 
 window.onload = function(){
 	newGame();
@@ -38,77 +39,46 @@ function upDateBoard(){
 	            case 2:
 	                td.innerHTML = '搭讪';
 	                td.style="background-color:#FFFFE1";
-	                badge=document.getElementById("badge1");
-	                badge.style="background-color:#FFFFE1";
 	                break;
 	            case 4:
 	                td.innerHTML = '约会';
 	                td.style="background-color:#FFEFD1";
-                	badge=document.getElementById("badge2");
-                	badge.style="background-color:#FFEFD1";
 	                break;
 	            case 8:
 	                td.innerHTML = '表白';
 	                td.style="background-color:#FEDFD5";
-                	badge=document.getElementById("badge3");
-                	badge.style="background-color:#FEDFD5";
-               	 	badge.innerHTML='表白';
 	                break;
 	            case 16:
 	                td.innerHTML = '被拒';
 	                td.style="background-color:#FFDEAD";
-                	badge=document.getElementById("badge4");
-                	badge.style="background-color:#FFDEAD";
-                	badge.innerHTML='被拒';
 	                break;
 	            case 32:
 	                td.innerHTML = '自闭';
-	                td.style="background-color:#FFA07A";
-                	badge=document.getElementById("badge5");
-                	badge.style="background-color:#FFA07A";
-               	 	badge.innerHTML='自闭';            
+	                td.style="background-color:#FFA07A";         
 	                break;
 	            case 64:
 	                td.innerHTML = '跪舔';
-	                td.style="background-color:#F04848";
-                	badge=document.getElementById("badge6");
-                	badge.style="background-color:#F04848";
-                	badge.innerHTML='跪舔';           
+	                td.style="background-color:#F04848";     
 	                break;
 	            case 128:
 	                td.innerHTML = '感动爱'; 
-	                td.style="background-color:#DB7093";
-                	badge=document.getElementById("badge7");
-                	badge.style="background-color:#DB7093";
-                	badge.innerHTML='感动爱';         
+	                td.style="background-color:#DB7093";    
 	                break;
 	            case 256:
 	                td.innerHTML = '牵手'; 
-	                td.style="background-color:#FF69B4";
-                	badge=document.getElementById("badge8");
-                	badge.style="background-color:#FF69B4";
-                	badge.innerHTML='牵手';           
+	                td.style="background-color:#FF69B4";        
 	                break;
 	            case 512:
 	                td.innerHTML = 'Touch!';
-	                td.style="background-color:#DA70D6";
-                	badge=document.getElementById("badge9");
-                	badge.style="background-color:#DA70D6";
-                	badge.innerHTML='Touch!';            
+	                td.style="background-color:#DA70D6";         
 	                break;
 	            case 1024:
 	                td.innerHTML = 'Kiss~'; 
-	                td.style="background-color:#FF4500";
-                	badge=document.getElementById("badge10");
-                	badge.style="background-color:#FF4500";
-                	badge.innerHTML='Kiss~';           
+	                td.style="background-color:#FF4500";        
 	                break;
 	            case 2048:
 	                td.innerHTML = 'Chicken dinner!!';  
 	                td.style="background-color:#FF3D5E";
-                	badge=document.getElementById("badge11");
-                	badge.style="background-color:#FF3D5E";
-                	badge.innerHTML='Ending..'; 
                 	if(firstWin){
                 		winGame();
                 		firstWin = false;
@@ -385,3 +355,45 @@ function isOver(){
 	mask.style.zIndex = 10;
 	mask.style.opacity = 1;
 }
+
+document.addEventListener('touchstart', function(event){
+	startX = event.touches[0].pageX;
+	startY = event.touches[0].pageY;
+})
+
+document.addEventListener('touchend', function(event){
+	endX = event.changedTouches[0].pageX;
+	endY = event.changedTouches[0].pageY;
+
+	let deltax = endX - startX;
+	let deltay = endY - startY;
+	if(Math.abs(deltax) >= Math.abs(deltay)){
+		if(deltax > 0){
+			if(moveRight()){
+	        	setTimeout(generateNum(),210);
+	        	setTimeout(upDateBoard(),210);
+	        	setTimeout(isOver(),300);
+	        }
+		}else{
+			if(moveLeft()){
+	        	setTimeout(generateNum(),210);
+	        	setTimeout(upDateBoard(),210);
+	        	setTimeout(isOver(),300);
+	        }
+		}
+	}else{
+		if(deltay > 0){
+			if(moveDown()){
+	        	setTimeout(generateNum(),210);
+	        	setTimeout(upDateBoard(),210);
+	        	setTimeout(isOver(),300);
+	        }
+		}else{
+			if(moveUp()){
+	        	setTimeout(generateNum(),210);
+	        	setTimeout(upDateBoard(),210);
+	        	setTimeout(isOver(),300);
+	        }
+		}
+	}
+});
