@@ -321,7 +321,7 @@ function moveDown(){
 				boardRow[i] *= 2;
 				showNum(i, j);
 				let k = i-1;
-				while(k < boardRowLen+1) boardRow[k--] = boardRow[k];
+				while(k > boardRowLen+1) boardRow[k--] = boardRow[k];
 				boardRow[boardRowLen+1] = 0;
 				combineMusic.src = "img/combine.wav";
 				break;
