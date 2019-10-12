@@ -38,7 +38,7 @@ function upDateBoard(){
         		switch(board[i][j]){
 	            case 2:
 	                td.innerHTML = '搭讪';
-	                td.style="background-color:#FFFFE1";
+	                td.style="background-color:#FFFFCA";
 	                break;
 	            case 4:
 	                td.innerHTML = '约会';
@@ -85,7 +85,8 @@ function upDateBoard(){
                 	}        
 	                break;
 	            default:
-	                td.style="background-color:#FF9999";
+	            	td.innerHTML = board[i][j];
+	                td.style="background-color:#FF7373";
 	                break;
         		}
         	}else{

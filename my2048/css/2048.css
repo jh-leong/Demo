@@ -10,7 +10,7 @@ body{
 header{
 	color: #F8FFE5;
 	text-align: center;
-	padding-top: 50px;
+	padding-top: 30px;
   width: 100%;
 }
 header span {
@@ -52,9 +52,10 @@ header span:hover{
 
 #record{
   width: 300px;
+  height: 40px;
   font-size: 22px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-around;
 }
@@ -93,7 +94,6 @@ header span:hover{
   background-color: #FF9933;
   color: white;
   outline: none;
-  float: left;
   margin: 10px 0 0 0;
 }
 
@@ -128,10 +128,14 @@ table{
 }
 
 tr,td{
-  width: 15%;
-  height: 15%;
+  width: 80px;
+  height: 80px;
   border: 1px solid #FF7373;
   border-radius: 10px;
+  max-width: 80px;
+  max-height: 80px
+  min-width: 80px;
+  min-height: 80px;
 }
 
 .boardCell{
