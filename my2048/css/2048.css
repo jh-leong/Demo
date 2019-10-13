@@ -99,7 +99,7 @@ header span:hover{
 
 #face:after{
   font-size: 30px;
-  content: "😐";
+  content: "🙈";
 }
 
 #newGame button:hover{
@@ -136,6 +136,7 @@ tr,td{
   max-height: 80px
   min-width: 80px;
   min-height: 80px;
+  font-size: 1.6rem;
 }
 
 .boardCell{
