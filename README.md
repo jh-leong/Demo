@@ -1,3 +1,3 @@
 # Dmeo
-Some simple demo :)
+Some demo : )
 Hope you like it.
