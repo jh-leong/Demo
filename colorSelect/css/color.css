@@ -60,7 +60,7 @@ body {
 	margin: 0 auto;
 	width: 400px;
 	padding: 10px 0;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 #color-wrapper ol {
@@ -84,7 +84,6 @@ body {
 
 #color-wrapper li:hover {
 	transform: scale(1.1);
-	transition: all 30ms linear;
 	cursor: pointer;
 }
 
@@ -94,9 +93,9 @@ body {
 
 .tip {
 	color: black;
-	font-family: "Roboto Mono", monospace;
 	opacity: 0;
 	pointer-events: none;
+    letter-spacing: 0.5px;
 }
 
 #color-wrapper h2 {
