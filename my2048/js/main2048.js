@@ -365,9 +365,9 @@ document.addEventListener('touchstart', function(event){
 	startY = event.touches[0].pageY;
 })
 
-document.addEventListener("touchmove", function(event){
-	event.preventDefault();
-})
+// document.addEventListener("touchmove", function(event){
+// 	event.preventDefault();
+// })
 
 document.addEventListener('touchend', function(event){
 	endX = event.changedTouches[0].pageX;
@@ -376,7 +376,7 @@ document.addEventListener('touchend', function(event){
 	let deltax = endX - startX;
 	let deltay = endY - startY;
 
-	if(Math.abs(deltax) < 0.3*document.Width && Math.abs(deltay) < 0.3*document.Width)
+	if(Math.abs(deltax) < 0.3*document.body.clientWidth && Math.abs(deltay) < 0.3*document.body.clientWidth)
 		return;
 
 	if(Math.abs(deltax) >= Math.abs(deltay)){
