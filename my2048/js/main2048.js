@@ -127,9 +127,9 @@ function generateNum(){
 
 window.onkeydown = function(){
     let code = event.keyCode;
-    event.preventDefault();
     switch (code) {
 	    case 37:
+	    	event.preventDefault();
 	        if(moveLeft()){
 	        	setTimeout(generateNum(),210);
 	        	setTimeout(upDateBoard(),210);
@@ -137,6 +137,7 @@ window.onkeydown = function(){
 	        }
 	        break;
 	    case 38:
+	    	event.preventDefault();
 	        if(moveUp()){
 	        	setTimeout(generateNum(),210);
 	        	setTimeout(upDateBoard(),210);
@@ -144,6 +145,7 @@ window.onkeydown = function(){
 	        }
 	        break;
 	    case 39:
+	    	event.preventDefault();
 	        if(moveRight()){
 	        	setTimeout(generateNum(),210);
 	        	setTimeout(upDateBoard(),210);
@@ -151,6 +153,7 @@ window.onkeydown = function(){
 	        }
 	        break;
 	    case 40:
+	    	event.preventDefault();
 	        if(moveDown()){
 	        	setTimeout(generateNum(),210);
 	        	setTimeout(upDateBoard(),210);
@@ -362,12 +365,20 @@ document.addEventListener('touchstart', function(event){
 	startY = event.touches[0].pageY;
 })
 
+document.addEventListener("touchmove", function(event){
+	event.preventDefault();
+})
+
 document.addEventListener('touchend', function(event){
 	endX = event.changedTouches[0].pageX;
 	endY = event.changedTouches[0].pageY;
 
 	let deltax = endX - startX;
 	let deltay = endY - startY;
+
+	if(Math.abs(deltax) < 0.3*documentWidth && Math.abs(deltay) < 0.3*documentWidth)
+		return;
+
 	if(Math.abs(deltax) >= Math.abs(deltay)){
 		if(deltax > 0){
 			if(moveRight()){
