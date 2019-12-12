@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>MSI</title>
+	<link rel="stylesheet" href="css/MSI.css">
+</head>
+<body>
+	<div id="table">
+		<div id="select">
+			<div id="region-select">
+				<p>Region :</p>
+				<label>
+					<input type="checkbox" checkbox-type="single" value='华东'>华东
+				</label>
+				<label>
+					<input type="checkbox" checkbox-type="single" value='华南'>华南
+				</label>
+				<label>
+					<input type="checkbox" checkbox-type="single" value='华北'>华北
+				</label>
+				<label>
+					<input type="checkbox" checkbox-type="all" value='全选'>全选
+				</label>
+			</div>
+			<div id="product-select">
+				<p>Product :</p>
+				<label>
+					<input type="checkbox" checkbox-type="single" value='手机'>手机
+				</label>
+				<label>
+					<input type="checkbox" checkbox-type="single" value='笔记本'>笔记本
+				</label>
+				<label>
+					<input type="checkbox" checkbox-type="single" value='智能音箱'>智能音箱
+				</label>
+				<label>
+					<input type="checkbox" checkbox-type="all" value='全选'>全选
+				</label>
+			</div>
+		</div>
+		<div id="chart">
+			<div id="lineChart">
+				<canvas id="drawing"></canvas>
+			</div>
+		</div>
+		<div id="save-btn"><button id="save">保存</button></div>
+		
+	</div>
+	<div id="table-wrapper"></div>
+	
+
+
+
+
+</body>
+<script src="js/checkbox.js" type="text/javascript"></script>
+<script src="js/table.js" type="text/javascript"></script>
+<script src="js/app.js" type="text/javascript"></script>
+<script src="js/line.js" type="text/javascript"></script>
+</html>
